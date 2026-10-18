@@ -17,19 +17,19 @@ A full-stack job portal built with **Node.js, Express.js, MongoDB, EJS, and Java
 
 ### Available Jobs
 
-![Available Jobs](screenshots/jobs.png)
+![Available Jobs](https://github.com/rakshiatgithub/CareerConnect-Job-Portal/blob/main/ScreenShots/available%20jobs.png)
 
 ### User Registration
 
-![User Registration](screenshots/signup.png)
+![User Registration](https://github.com/rakshiatgithub/CareerConnect-Job-Portal/blob/main/ScreenShots/register.png)
 
 ### Login
 
-![Login](screenshots/login.png)
+![Login](https://github.com/rakshiatgithub/CareerConnect-Job-Portal/blob/main/ScreenShots/login.png)
 
 ### Post a Job
 
-![Post a Job](screenshots/post-job.png)
+![Post a Job](https://github.com/rakshiatgithub/CareerConnect-Job-Portal/blob/main/ScreenShots/newjob%20posting.png)
 
 ### Candidate Applications
 
@@ -37,7 +37,7 @@ A full-stack job portal built with **Node.js, Express.js, MongoDB, EJS, and Java
 
 ### Recruiter Applicant Tracking
 
-![Applicant Tracking](screenshots/applicant-tracking.png)
+![Applicant Tracking](https://github.com/rakshiatgithub/CareerConnect-Job-Portal/blob/main/ScreenShots/applicant%20tracking.png)
 
 ## Tech Stack
 
