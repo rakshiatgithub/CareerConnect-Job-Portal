@@ -33,7 +33,7 @@ A full-stack job portal built with **Node.js, Express.js, MongoDB, EJS, and Java
 
 ### Candidate Applications
 
-![Candidate Applications](screenshots/my-applications.png)
+![Candidate Applications](https://github.com/rakshiatgithub/CareerConnect-Job-Portal/blob/main/ScreenShots/My%20Applications.png)
 
 ### Recruiter Applicant Tracking
 
