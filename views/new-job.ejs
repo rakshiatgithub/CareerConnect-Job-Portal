@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Job | CareerConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CareerConnect</h1>
+    <h2>Post a New Job</h2>
+
+    <form action="/jobs" method="POST">
+      <input name="title" placeholder="Job Title" required>
+      <input name="company" placeholder="Company Name" required>
+      <input name="location" placeholder="Job Location" required>
+      <input name="salary" placeholder="Salary (optional)">
+
+      <textarea name="description"
+        placeholder="Job Description"
+        rows="5" required></textarea>
+
+      <button type="submit">Publish Job</button>
+    </form>
+
+    <p><a href="/jobs">View All Jobs</a></p>
+  </div>
+</body>
+</html>

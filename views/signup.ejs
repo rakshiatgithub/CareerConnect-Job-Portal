@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | CareerConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CareerConnect</h1>
+    <h2>Create Your Account</h2>
+
+    <form action="/signup" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+
+      <input type="email" name="email" placeholder="Email Address" required>
+
+      <input type="password" name="password"
+             placeholder="Password" minlength="8" required>
+
+      <select name="role" required>
+        <option value="">Select Account Type</option>
+        <option value="candidate">Candidate</option>
+        <option value="recruiter">Recruiter</option>
+      </select>
+
+      <button type="submit">Create Account</button>
+    </form>
+
+    <p>Already registered? <a href="/login">Login</a></p>
+  </div>
+</body>
+</html>

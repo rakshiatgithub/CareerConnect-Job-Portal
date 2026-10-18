@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Applications | CareerConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container" style="max-width: 800px;">
+    <h1>CareerConnect</h1>
+    <h2>My Applications</h2>
+
+    <% if (applications.length === 0) { %>
+      <p>You haven't applied for any jobs yet.</p>
+    <% } %>
+
+    <% applications.forEach(application => { %>
+      <div style="border: 1px solid #ddd; padding: 18px; margin-top: 16px; border-radius: 8px;">
+        <% if (application.job) { %>
+          <h3><%= application.job.title %></h3>
+          <p><strong>Company:</strong> <%= application.job.company %></p>
+          <p><strong>Location:</strong> <%= application.job.location %></p>
+        <% } else { %>
+          <p>This job posting is no longer available.</p>
+        <% } %>
+
+        <p><strong>Status:</strong> <%= application.status %></p>
+        <p><strong>Applied on:</strong> <%= application.createdAt.toLocaleDateString() %></p>
+      </div>
+    <% }) %>
+
+    <p><a href="/jobs">Browse Jobs</a></p>
+    <p><a href="/">Home</a></p>
+  </div>
+</body>
+</html>

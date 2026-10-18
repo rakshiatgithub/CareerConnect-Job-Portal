@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applicant Tracking | CareerConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container" style="max-width: 800px;">
+    <h1>CareerConnect</h1>
+    <h2>Applicant Tracking</h2>
+
+    <% if (applications.length === 0) { %>
+      <p>No applications received yet.</p>
+    <% } %>
+
+    <% applications.forEach(application => { %>
+      <div style="border: 1px solid #ddd; padding: 18px; margin-top: 16px; border-radius: 8px;">
+        <h3><%= application.candidate ? application.candidate.name : "Candidate unavailable" %></h3>
+        <p><strong>Email:</strong> <%= application.candidate ? application.candidate.email : "Unavailable" %></p>
+        <p><strong>Job:</strong> <%= application.job ? application.job.title : "Unavailable" %></p>
+        <p><strong>Status:</strong> <%= application.status %></p>
+
+        <form action="/applications/<%= application._id %>/status" method="POST">
+          <select name="status" required>
+            <% ["Applied", "Shortlisted", "Rejected", "Selected"].forEach(status => { %>
+              <option value="<%= status %>" <%= application.status === status ? "selected" : "" %>>
+                <%= status %>
+              </option>
+            <% }) %>
+          </select>
+          <button type="submit">Update Status</button>
+        </form>
+      </div>
+    <% }) %>
+
+    <p><a href="/jobs">Manage Jobs</a></p>
+  </div>
+</body>
+</html>

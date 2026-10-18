@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Job | CareerConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CareerConnect</h1>
+    <h2>Edit Job Posting</h2>
+
+    <form action="/jobs/<%= job._id %>/edit" method="POST">
+      <input
+        type="text"
+        name="title"
+        value="<%= job.title %>"
+        placeholder="Job Title"
+        required
+      >
+
+      <input
+        type="text"
+        name="company"
+        value="<%= job.company %>"
+        placeholder="Company Name"
+        required
+      >
+
+      <input
+        type="text"
+        name="location"
+        value="<%= job.location %>"
+        placeholder="Location"
+        required
+      >
+
+      <input
+        type="text"
+        name="salary"
+        value="<%= job.salary %>"
+        placeholder="Salary"
+      >
+
+      <textarea
+        name="description"
+        rows="5"
+        placeholder="Job Description"
+        required
+      ><%= job.description %></textarea>
+
+      <button type="submit">Update Job</button>
+    </form>
+
+    <p><a href="/jobs">Cancel and Return to Jobs</a></p>
+  </div>
+</body>
+</html>
